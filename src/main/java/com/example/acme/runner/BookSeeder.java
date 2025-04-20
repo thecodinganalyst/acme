@@ -19,7 +19,11 @@ public class BookSeeder implements CommandLineRunner {
     @Override
     public void run(String... args) {
         for (int i = 0; i < 10_000; i++) {
-            bookRepository.save(new Book(faker.book().title(), faker.book().author()));
+            Book book = Book.builder()
+                .title(faker.book().title())
+                .author(faker.book().author())
+                .build();
+            this.bookRepository.save(book);
         }
     }
 }
