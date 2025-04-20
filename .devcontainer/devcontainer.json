@@ -3,6 +3,10 @@
   "image": "mcr.microsoft.com/devcontainers/java:17",
   "customizations": {
     "vscode": {
+      "settings": {
+        "editor.fontSize": 14,
+        "terminal.integrated.fontSize": 14
+      },
       "extensions": [
         "vscjava.vscode-java-pack",
         "pivotal.vscode-spring-boot",
