@@ -6,7 +6,8 @@
       "extensions": [
         "vscjava.vscode-java-pack",
         "pivotal.vscode-spring-boot",
-        "vscjava.vscode-gradle"
+        "vscjava.vscode-gradle",
+        "gabrielbb.vscode-lombok" 
       ]
     }
   },
