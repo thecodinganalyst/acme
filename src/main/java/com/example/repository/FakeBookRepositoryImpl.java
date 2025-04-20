@@ -13,7 +13,7 @@ import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Component;
 
 import com.example.acme.model.Book;
-import com.github.javafaker.Faker;
+import net.datafaker.Faker;
 
 @Component
 public class FakeBookRepositoryImpl implements BookRepository {
