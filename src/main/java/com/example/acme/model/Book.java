@@ -7,7 +7,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import net.datafaker.Faker;
 
 @Data
 @Builder
@@ -20,11 +19,4 @@ public class Book {
     private Long id;
     private String title;
     private String author;
-
-    public static Book fakeBook(Faker faker){
-        return Book.builder()
-            .author(faker.book().author())
-            .title(faker.book().title())
-            .build();
-    }
 }
