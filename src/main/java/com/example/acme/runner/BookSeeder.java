@@ -5,9 +5,6 @@ import com.example.acme.repository.BookRepository;
 
 import net.datafaker.Faker;
 
-import java.util.List;
-import java.util.stream.IntStream;
-
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,10 +16,9 @@ public class BookSeeder {
     public CommandLineRunner seedBooks(BookRepository bookRepository, Faker faker) {
         return args -> {
             if(bookRepository.count() > 0) return;
-            List<Book> books = IntStream.of(10_000)
-                .mapToObj(i -> fakeBook(faker))
-                .toList();
-            bookRepository.saveAll(books);
+            for(int i = 0; i < 10_000; i++){
+                bookRepository.save(fakeBook(faker));
+            }
         };
     }
 
